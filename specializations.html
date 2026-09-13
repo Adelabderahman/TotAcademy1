@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>المسارات التدريبية - TOT Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--primary-blue:#1152cf;--secondary-blue:#0b3a96;--primary-green:#059669;--secondary-green:#064e3b;--accent-yellow:#ffab00;--text-dark:#1e293b;--text-light:#64748b;--white:#ffffff;--bg-page:#f7f9fc;--border-color:#e2e8f0;--font-en:'Inter',sans-serif;--font-ar:'Tajawal',sans-serif;--transition:0.4s ease;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html[dir='ltr'] body{font-family:var(--font-en);}
+html[dir='rtl'] body{font-family:var(--font-ar);}
+body{background-color:var(--bg-page);color:var(--text-dark);overflow-x:hidden;}
+.container{max-width:95%;margin:0 auto;padding:0 20px;}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:15px 0;font-size:14px;font-weight:500;}
+.topbar-left{display:flex;align-items:center;gap:20px;}
+.lang-switcher{padding:8px 12px;background:var(--white);border:1px solid var(--border-color);border-radius:8px;cursor:pointer;font-family:inherit;font-weight:600;outline:none;}
+.social-icons-group{display:flex;align-items:center;gap:8px;}
+.social-icon{display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:var(--white);border-radius:8px;border:1px solid var(--border-color);color:var(--text-dark);text-decoration:none;transition:var(--transition);}
+.social-icon:hover{border-color:var(--primary-blue);color:var(--primary-blue);background:#f8fafc;transform:translateY(-2px);}
+.social-icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.signup-btn{background:var(--white);color:var(--text-dark);padding:8px 24px;border-radius:8px;border:1px solid var(--border-color);text-decoration:none;font-weight:600;transition:var(--transition);white-space:nowrap;}
+.signup-btn:hover{border-color:var(--text-dark);}
+.back-to-top{position:fixed;bottom:30px;left:30px;width:50px;height:50px;background:var(--primary-blue);color:var(--white);border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:all 0.4s cubic-bezier(0.4,0,0.2,1);z-index:1000;box-shadow:0 4px 15px rgba(17,82,207,0.4);}
+.back-to-top.show{opacity:1;visibility:visible;}
+.back-to-top:hover{background:var(--accent-yellow);color:#000;transform:translateY(-5px);box-shadow:0 8px 20px rgba(255,171,0,0.5);}
+#backToTop.back-to-top.lifted{bottom:85px;}
+.hero-wrapper{background:linear-gradient(135deg,#0d42a6 0%,#1152cf 40%,#00d2ff 100%);border-radius:24px;padding: 10px 20px;margin-bottom:10px;color:var(--white);}
+.main-nav{background-color:var(--white);border-radius:16px;padding:2px 10px;display:flex;align-items:center;justify-content:center;position:relative;transition:var(--transition);}
+.scrolled-nav{position:fixed !important;top:0;left:0;right:0;margin:0 auto;width:calc(95% - 40px);border-radius:0 0 16px 16px !important;z-index:1000;background:rgba(255,255,255,0.85) !important;backdrop-filter:blur(15px);box-shadow:0 4px 30px rgba(0,0,0,0.1);padding:15px 30px !important;transition:all 0.3s ease;}
+.logo{text-decoration:none;display:flex;align-items:center;gap:10px;}
+.logo-img{height:35px;width:auto;object-fit:contain;}
+.logo-text-wrapper{font-size:22px;font-weight:800;color:var(--primary-blue);}
+.logo-text-wrapper .highlight{color:var(--accent-yellow);}
+html[dir='rtl'] .logo-text-wrapper{font-size:13px;font-weight:700;letter-spacing:0;}
+
+.main-footer{background:linear-gradient(135deg,#0b3a96 0%,#059669 100%);color:var(--white);padding:60px 0 20px;margin-top:50px;border-radius:30px 30px 0 0;box-shadow:0 -10px 30px rgba(0,0,0,0.1);}
+.footer-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-bottom:40px;}
+.footer-logo-wrapper{display:flex;align-items:center;gap:10px;margin-bottom:20px;}
+.footer-logo-img{height:40px;background:white;padding:5px;border-radius:8px;}
+.footer-desc{color:rgba(255,255,255,0.85);font-size:14.5px;line-height:1.8;margin-bottom:25px;}
+.social-row{display:flex;gap:10px;}
+.social-row .social-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:8px;color:white;transition:0.3s;}
+.social-row .social-btn:hover{background:var(--accent-yellow);color:#000;border-color:var(--accent-yellow);transform:translateY(-3px);}
+.social-row .social-btn svg{width:16px;height:16px;fill:currentColor;}
+.footer-cols h4{font-size:18px;font-weight:700;margin-bottom:20px;color:var(--accent-yellow);}
+.footer-links{list-style:none;padding:0;}
+.footer-links li{margin-bottom:12px;}
+.footer-links a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:14.5px;transition:0.3s;}
+.footer-links a:hover{color:var(--accent-yellow);padding-inline-start:5px;}
+.footer-contact-list{list-style:none;padding:0;}
+.footer-contact-list li{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.85);font-size:14px;}
+.footer-contact-list li svg{width:16px;height:16px;stroke:var(--accent-yellow);flex-shrink:0;}
+.contact-header{font-weight:700;color:white !important;margin-bottom:15px !important;}
+.contact-sub-item{padding-inline-start:35px !important;margin-bottom:12px !important;}
+.newsletter-form{position:relative;margin-top:15px;}
+.newsletter-input{width:100%;padding:12px 15px;padding-inline-end:60px;border:1px solid rgba(255,255,255,0.2);border-radius:8px;background:rgba(0,0,0,0.2);color:white;outline:none;font-family:inherit;}
+.newsletter-input::placeholder{color:rgba(255,255,255,0.5);}
+.newsletter-btn{position:absolute;inset-inline-end:5px;top:5px;bottom:5px;background:var(--accent-yellow);color:#000;border:none;padding:0 15px;border-radius:6px;cursor:pointer;transition:0.3s;display:flex;align-items:center;justify-content:center;}
+.newsletter-btn:hover{background:#fff;}
+.copyright{text-align:center;padding-top:25px;border-top:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);font-size:13px;line-height:1.6;}
+.mobile-bottom-nav{display:none;}
+@media (max-width:991px){.mobile-bottom-nav{display:flex;position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,0.92);box-shadow:0 -4px 25px rgba(0,0,0,0.12);z-index:998;justify-content:space-between;align-items:center;padding:8px 6px calc(8px + env(safe-area-inset-bottom));border-radius:20px 20px 0 0;transform:translateY(100%);transition:transform 0.35s ease;}
+.mobile-bottom-nav.show{transform:translateY(0);}}
+.bottom-nav-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;flex:1;text-decoration:none;color:var(--text-light);padding:6px 2px;border-radius:12px;transition:0.25s;}
+.bottom-nav-item.active,.bottom-nav-item:hover{color:var(--primary-blue);}
+.bottom-nav-icon{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.bottom-nav-text{font-size:10.5px;font-weight:600;}
+#mobile-bottom-nav.compact{padding:4px 6px calc(4px + env(safe-area-inset-bottom));}
+#mobile-bottom-nav.compact .bottom-nav-item{flex-direction:row;gap:6px;}
+#mobile-bottom-nav.compact .bottom-nav-text{font-size:9px;}
+@media (max-width:991px){.social-icons-group{gap:4px;}.social-icon{width:30px;height:30px;border-radius:6px;}.social-icon svg{width:14px;height:14px;}.signup-btn{font-size:11px;padding:6px 10px;}.scrolled-nav{width:100%;padding:10px 15px !important;}.hero-wrapper{padding: 10px 25px;border-radius:16px;margin-bottom: 10px;}.logo-img{height:26px;}.logo-text-wrapper{font-size:10px;white-space:nowrap;}.back-to-top{bottom:85px;left:20px;width:45px;height:45px;}.footer-cols{grid-template-columns:1fr;gap:40px;}.main-footer{padding:40px 15px 20px;border-radius:20px 20px 0 0;margin-top:30px;text-align:center;}.footer-logo-wrapper{justify-content:center;}.social-row{justify-content:center;}.footer-contact-list li{justify-content:center;}.contact-sub-item{padding-inline-start:0 !important;}.footer-links{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;grid-auto-flow:column;gap:15px;text-align:center;}.footer-links li{margin-bottom:0;}}
+
+/* ===== Tracks Hero ===== */
+.tracks-hero{position:relative;width:100vw;margin-left:calc(50% - 50vw);overflow:hidden;background:linear-gradient(135deg,var(--secondary-blue) 0%,var(--primary-blue) 55%,var(--primary-green) 130%);padding:90px 20px 0;text-align:center;color:#fff;}
+.tracks-hero-inner{position:relative;z-index:2;max-width:820px;margin:0 auto;padding-bottom:60px;}
+.tracks-hero-badge{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:30px;padding:6px 18px;font-size:0.85rem;margin-bottom:20px;backdrop-filter:blur(4px);}
+.tracks-hero h1{font-size:2.6rem;font-weight:800;margin:0 0 16px;line-height:1.3;}
+.tracks-hero h1 span{color:var(--accent-yellow);}
+.tracks-hero p{font-size:1.05rem;color:rgba(255,255,255,0.88);max-width:640px;margin:0 auto 30px;line-height:1.8;}
+.tracks-hero-stats{display:flex;justify-content:center;flex-wrap:wrap;gap:30px;margin-bottom:20px;}
+.thero-stat{display:flex;flex-direction:column;align-items:center;min-width:90px;}
+.thero-stat b{font-size:1.8rem;font-weight:800;color:var(--accent-yellow);}
+.thero-stat span{font-size:0.8rem;color:rgba(255,255,255,0.8);}
+.scroll-cue{display:inline-flex;flex-direction:column;align-items:center;gap:6px;color:#fff;text-decoration:none;font-size:0.85rem;font-family:inherit;opacity:0.9;animation:bounceCue 2s infinite;background:none;border:0;cursor:pointer;padding:0;}
+@keyframes bounceCue{0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}
+.tracks-hero-wave{display:block;position:relative;z-index:1;width:calc(100% + 40px)!important;max-width:none;margin-left:-20px;margin-right:-20px;margin-bottom:-2px;}
+.tracks-orbit{position:absolute;inset:0;z-index:1;pointer-events:none;}
+.orbit-chip{position:absolute;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:20px;padding:8px 16px;font-size:0.85rem;color:#fff;backdrop-filter:blur(3px);white-space:nowrap;}
+.orbit-chip.c1{top:18%;right:6%;animation:floatChip 6s ease-in-out infinite;}
+.orbit-chip.c2{top:65%;right:12%;animation:floatChip 7s ease-in-out infinite 1s;}
+.orbit-chip.c3{top:22%;left:6%;animation:floatChip 6.5s ease-in-out infinite 0.5s;}
+.orbit-chip.c4{top:68%;left:10%;animation:floatChip 7.5s ease-in-out infinite 1.5s;}
+@keyframes floatChip{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+@media (max-width: 767px){
+  .tracks-orbit{display:block;overflow:hidden;}
+  .tracks-orbit .orbit-chip{display:flex;align-items:center;gap:4px;top:42%;left:50%;right:auto;padding:5px 9px;font-size:0.62rem;opacity:0.52;animation:mobileOrbit 16s linear infinite;will-change:transform;}
+  .tracks-orbit .orbit-chip.c1{animation-delay:0s;}
+  .tracks-orbit .orbit-chip.c2{animation-delay:-4s;}
+  .tracks-orbit .orbit-chip.c3{animation-delay:-8s;}
+  .tracks-orbit .orbit-chip.c4{animation-delay:-12s;}
+  .tracks-hero h1{font-size:1.7rem;}.tracks-hero{padding-top:70px;}
+}
+@keyframes mobileOrbit{
+  0%{transform:rotate(0deg) translateX(min(29vw,112px)) rotate(0deg);}
+  25%{transform:rotate(90deg) translateX(min(29vw,112px)) rotate(-90deg);}
+  50%{transform:rotate(180deg) translateX(min(29vw,112px)) rotate(-180deg);}
+  75%{transform:rotate(270deg) translateX(min(29vw,112px)) rotate(-270deg);}
+  100%{transform:rotate(360deg) translateX(min(29vw,112px)) rotate(-360deg);}
+}
+
+/* ===== Tracks body / filters ===== */
+.tracks-body{background:var(--bg-page);padding:60px 20px 90px;}
+.tracks-body-inner{max-width:1200px;margin:0 auto;}
+.section-heading{text-align:center;max-width:700px;margin:0 auto 35px;}
+.section-heading .eyebrow{display:inline-block;color:var(--primary-green);font-weight:700;font-size:0.85rem;margin-bottom:8px;}
+.section-heading h2{font-size:1.9rem;font-weight:800;color:var(--text-dark);margin:0 0 10px;}
+.section-heading p{color:var(--text-light);font-size:0.95rem;line-height:1.8;}
+
+.filters-bar{display:flex;flex-wrap:wrap;align-items:end;gap:16px;background:#fff;border:1px solid var(--border-color);border-radius:16px;padding:18px 20px;box-shadow:0 6px 18px rgba(17,82,207,0.06);margin-bottom:14px;}
+.filter-field{display:flex;flex-direction:column;gap:6px;flex:1;min-width:150px;}
+.filter-field label{font-size:0.78rem;color:var(--text-light);font-weight:600;}
+.filter-field select,.filter-field input{border:1px solid var(--border-color);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:0.9rem;color:var(--text-dark);background:#fff;}
+.filter-search-wrap-field{flex:2;min-width:220px;}
+.filter-search-wrap{display:flex;align-items:center;gap:8px;border:1px solid var(--border-color);border-radius:10px;padding:0 12px;}
+.filter-search-wrap svg{width:16px;height:16px;color:var(--text-light);flex-shrink:0;}
+.filter-search-wrap input{border:none;padding:10px 0;flex:1;}
+.filter-search-wrap input:focus{outline:none;}
+.filters-reset{display:flex;justify-content:flex-end;margin-bottom:30px;}
+.filters-reset button{background:none;border:1px solid var(--border-color);border-radius:20px;padding:8px 16px;font-size:0.82rem;color:var(--text-light);cursor:pointer;transition:var(--transition);}
+.filters-reset button:hover{background:var(--primary-blue);color:#fff;border-color:var(--primary-blue);}
+.no-results{display:none;text-align:center;padding:40px 20px;color:var(--text-light);background:#fff;border-radius:14px;border:1px dashed var(--border-color);margin-bottom:20px;}
+.no-results.show{display:block;}
+
+.spec-section{margin-bottom:46px;}
+.spec-head{display:flex;align-items:center;gap:14px;margin-bottom:18px;}
+.spec-icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:#fff;flex-shrink:0;}
+.spec-head h3{margin:0;font-size:1.25rem;font-weight:800;color:var(--text-dark);}
+.spec-head span{font-size:0.82rem;color:var(--text-light);}
+@media (max-width:767px){
+  .spec-head{justify-content:center;text-align:center;background:linear-gradient(135deg,#eef3fb,#f4f0ff);border-radius:14px;padding:12px 14px;gap:10px;}
+  .spec-head > div{display:flex;flex-direction:column;align-items:center;}
+  .spec-head h3{font-size:1.02rem;}
+  .spec-head span{font-size:0.72rem;}
+  .spec-icon{width:38px;height:38px;font-size:1rem;flex-shrink:0;}
+}
+.spec-head{position:relative;overflow:hidden;border-radius:16px;padding:14px 16px;border:1px solid rgba(255,255,255,0.75);box-shadow:0 8px 24px rgba(30,41,59,0.08);}
+.spec-head::after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;inset-inline-end:-48px;top:-68px;background:rgba(255,255,255,0.5);box-shadow:0 0 0 20px rgba(255,255,255,0.16);pointer-events:none;}
+.spec-head > *{position:relative;z-index:1;}
+.spec-head.spec-head-tech{background:linear-gradient(135deg,#e8f1ff 0%,#d9e9ff 58%,#edf7ff 100%);}
+.spec-head.spec-head-marketing{background:linear-gradient(135deg,#fff2df 0%,#ffe3c1 58%,#fff7e9 100%);}
+.spec-head.spec-head-media{background:linear-gradient(135deg,#ffe8e5 0%,#ffd8d2 58%,#fff1ef 100%);}
+.spec-head.spec-head-creativity{background:linear-gradient(135deg,#f1e9ff 0%,#e4d7ff 58%,#f8f3ff 100%);}
+.spec-section.spec-empty{display:none;}
+.swipe-dot{width:8px;height:8px;border-radius:50%;background:rgba(17,82,207,0.25);transition:0.3s;}
+.swipe-dot.active{background:var(--primary-blue);width:24px;border-radius:10px;}
+.swipe-container{overflow:hidden;width:100%;padding:10px 0 20px 0;touch-action:pan-y;}
+.swipe-wrapper{display:flex;transition:transform 0.3s ease-out;will-change:transform;cursor:grab;padding:0 4px;}
+.swipe-wrapper:active{cursor:grabbing;}
+.swipe-slide{flex:0 0 92%;max-width:420px;padding:0 6px;box-sizing:border-box;}
+.swipe-pagination{display:flex;justify-content:center;gap:8px;margin-top:10px;margin-bottom:10px;}
+@media (max-width:767px){.swipe-wrapper{padding-inline:0;}.swipe-slide{flex:0 0 100%;max-width:100%;padding:0;}}
+
+
+.tracks-swipe-wrapper{display:flex;gap:22px;}
+@media (min-width: 992px){.tracks-swipe-wrapper{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;transform:none !important;padding:0;}.tracks-swipe-wrapper .swipe-slide{flex:auto;padding:0;max-width:none;}.spec-section .swipe-pagination{display:none;}}
+
+/* ===== Flip Cards ===== */
+.flip-card{width:100%;height:560px;perspective:1600px;position:relative;display:block;cursor:pointer;}
+.flip-card-inner{position:relative;width:100%;height:560px;transition:transform 0.6s;transform-style:preserve-3d;}
+.flip-card.is-flipped .flip-card-inner{transform:rotateY(180deg);}
+.flip-face{position:absolute;top:0;left:0;width:100%;height:100%;backface-visibility:hidden;border-radius:18px;background:#fff;border:1px solid var(--border-color);box-shadow:0 10px 26px rgba(17,82,207,0.08);overflow:hidden;display:flex;flex-direction:column;}
+.flip-back{transform:rotateY(180deg);padding:22px;}
+.fc-banner{position:relative;height:190px;flex-shrink:0;}
+.fc-banner img{width:100%;height:100%;object-fit:cover;}
+.fc-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.15),rgba(0,0,0,0.65));}
+.fc-banner-top{position:absolute;top:12px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center;}
+.fc-status{background:rgba(255,255,255,0.92);color:var(--primary-blue);font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:20px;}
+.fc-status.completed{background:var(--primary-green);color:#fff;}
+.fc-spec-badge{background:rgba(0,0,0,0.4);color:#fff;font-size:0.72rem;padding:4px 10px;border-radius:20px;}
+.fc-banner-title{position:absolute;bottom:12px;left:14px;right:14px;color:#fff;font-weight:800;font-size:1.05rem;line-height:1.4;text-align:center;text-shadow:0 2px 6px rgba(0,0,0,0.5);}
+.fc-body{padding:16px 18px;display:flex;flex-direction:column;flex:1;gap:10px;}
+.fc-summary{font-size:0.82rem;color:var(--text-light);line-height:1.7;min-height:40px;margin:0;}
+.fc-meta-row{display:flex;justify-content:space-between;font-size:0.82rem;font-weight:700;color:var(--text-dark);border-top:1px dashed var(--border-color);border-bottom:1px dashed var(--border-color);padding:8px 0;}
+.fc-trainers-label{font-size:0.75rem;color:var(--text-light);font-weight:700;margin-top:2px;}
+.fc-trainers{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.fc-trainer-link{display:flex;align-items:center;gap:6px;font-size:0.74rem;color:var(--text-dark);text-decoration:none;background:var(--bg-page);border:1px solid var(--border-color);border-radius:10px;padding:5px 8px;min-width:0;transition:var(--transition);}
+.fc-trainer-link:hover{background:#eef3fb;border-color:var(--primary-blue);}
+.fc-trainer-link span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;}
+.fc-trainer-link img{width:22px;height:22px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+.fc-cta{margin-top:4px;background:var(--primary-green);color:#fff;border:none;border-radius:10px;padding:12px;font-weight:700;font-size:0.88rem;cursor:pointer;transition:var(--transition);}
+.fc-cta:hover{background:var(--secondary-green);}
+
+.fc-flip-close{position:absolute;top:10px;left:10px;background:var(--bg-page);border:none;border-radius:50%;width:28px;height:28px;cursor:pointer;color:var(--text-light);font-size:0.9rem;z-index:5;}
+.fc-back-face{cursor:pointer;}
+.fc-back-head{text-align:center;margin-bottom:8px;}
+.fc-back-title{font-weight:800;color:var(--text-dark);font-size:0.92rem;margin-bottom:6px;}
+.fc-metrics-title{font-size:0.8rem;font-weight:800;color:var(--primary-blue);margin-bottom:8px;text-align:center;}
+.fc-levels{display:flex;gap:8px;justify-content:center;margin-bottom:4px;}
+.fc-level-btn{flex:1;background:var(--bg-page);border:1px solid var(--border-color);border-radius:10px;padding:8px 6px;font-size:0.78rem;font-weight:700;color:var(--text-light);cursor:pointer;transition:var(--transition);}
+.fc-level-btn.active{background:var(--primary-blue);color:#fff;border-color:var(--primary-blue);}
+.fc-metrics{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:8px;align-content:stretch;overflow-y:auto;padding:4px 2px;}
+.fc-metric{display:flex;align-items:center;gap:8px;font-size:0.76rem;color:var(--text-dark);background:var(--bg-page);border:1px solid var(--border-color);border-radius:10px;padding:10px 10px;line-height:1.25;min-height:43px;box-sizing:border-box;}
+.fc-metric .metric-ico{font-size:1.15rem;flex-shrink:0;}
+.fc-back-footer{margin-top:8px;}
+.fc-back-cta{display:flex;align-items:center;justify-content:center;width:100%;background:var(--primary-blue);color:#fff;border:none;border-radius:10px;padding:12px;font-weight:700;font-size:0.9rem;cursor:pointer;text-decoration:none;}
+.fc-back-cta:hover{background:var(--secondary-blue);}
+
+/* ===== Specialization-matched card themes ===== */
+.flip-card.theme-tech{--card-bg:linear-gradient(135deg,#e8f1ff 0%,#d9e9ff 58%,#edf7ff 100%);--card-accent:#1152cf;--card-accent-dark:#0b3a96;--card-border:#b9d3fb;--card-shadow:rgba(17,82,207,0.18);}
+.flip-card.theme-marketing{--card-bg:linear-gradient(135deg,#fff2df 0%,#ffe3c1 58%,#fff7e9 100%);--card-accent:#d5803b;--card-accent-dark:#a95c20;--card-border:#f3c58e;--card-shadow:rgba(213,128,59,0.18);}
+.flip-card.theme-media{--card-bg:linear-gradient(135deg,#ffe8e5 0%,#ffd8d2 58%,#fff1ef 100%);--card-accent:#e56458;--card-accent-dark:#b7463d;--card-border:#f1b7b0;--card-shadow:rgba(229,100,88,0.18);}
+.flip-card.theme-creativity{--card-bg:linear-gradient(135deg,#f1e9ff 0%,#e4d7ff 58%,#f8f3ff 100%);--card-accent:#8b5cf6;--card-accent-dark:#6840c7;--card-border:#cdb9f7;--card-shadow:rgba(139,92,246,0.18);}
+.flip-card[class*="theme-"] .flip-face{background:var(--card-bg);border-color:var(--card-border);box-shadow:0 12px 30px var(--card-shadow);}
+.flip-card[class*="theme-"] .fc-trainer-link,.flip-card[class*="theme-"] .fc-metric,.flip-card[class*="theme-"] .fc-level-btn,.flip-card[class*="theme-"] .fc-flip-close{background:rgba(255,255,255,0.66);border-color:var(--card-border);}
+.flip-card[class*="theme-"] .fc-status:not(.completed),.flip-card[class*="theme-"] .fc-metrics-title{color:var(--card-accent);}
+.flip-card[class*="theme-"] .fc-cta,.flip-card[class*="theme-"] .fc-level-btn.active{background:var(--card-accent);border-color:var(--card-accent);color:#fff;}
+.flip-card[class*="theme-"] .fc-cta:hover,.flip-card[class*="theme-"] .fc-level-btn.active:hover{background:var(--card-accent-dark);border-color:var(--card-accent-dark);}
+.flip-card[class*="theme-"] .fc-trainer-link:hover{background:rgba(255,255,255,0.9);border-color:var(--card-accent);}
+
+@media (max-width: 767px){
+  .flip-card,.flip-card-inner{height:414px;}
+  .fc-banner{height:150px;}
+  .fc-body{padding:12px 14px;gap:7px;}
+  .fc-summary{font-size:0.78rem; display:-webkit-box; -webkit-line-clamp:2; line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;}
+  .flip-back{padding:14px;}
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="topbar">
+<div class="topbar-left">
+<select id="lang-switcher" class="lang-switcher">
+<option value="ar">🇩🇿 العربية</option>
+<option value="en">🇬🇧 English</option>
+<option value="fr">🇫🇷 Français</option>
+</select>
+<div class="social-icons-group">
+<a href="mailto:totacademy@gmail.com" class="social-icon" title="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+<a href="https://wa.me/213555989370" target="_blank" class="social-icon" title="Whatsapp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+<a href="https://sites.google.com/view/totacademya/hello" target="_blank" class="social-icon" title="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+<a href="https://sites.google.com/view/totacademya/hello" target="_blank" class="social-icon" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+<a href="https://sites.google.com/view/totacademya/hello" target="_blank" class="social-icon" title="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+</div>
+</div>
+<a href="https://sites.google.com/view/totacademya/totf126" class="signup-btn" data-i18n="top_signup">التسجيل</a>
+</div>
+<div class="hero-wrapper">
+<nav class="main-nav" id="main-nav">
+<a href="https://sites.google.com/view/totacademya/hello" class="logo">
+<img src="https://i.postimg.cc/T3zh5Xrq/TOTACADEMY-LOGO.png" alt="Logo" class="logo-img">
+<span class="logo-text-wrapper" data-i18n-html="logo_text">TOT<span class="highlight">Academy/Specials</span></span>
+</a>
+</nav>
+</div>
+</div>
+
+<!-- ================= القسم الأول: تعريف الصفحة ================= -->
+<section class="tracks-hero">
+<div class="tracks-orbit">
+<div class="orbit-chip c1">💻 <span data-i18n="tracks_orbit_tech">تكنولوجيا</span></div>
+<div class="orbit-chip c2">📈 <span data-i18n="tracks_orbit_marketing">تسويق</span></div>
+<div class="orbit-chip c3">🎙️ <span data-i18n="tracks_orbit_media">إعلام واتصال</span></div>
+<div class="orbit-chip c4">💡 <span data-i18n="tracks_orbit_creativity">ابتكار وإبداع</span></div>
+</div>
+<div class="tracks-hero-inner">
+<span class="tracks-hero-badge" data-i18n="tracks_hero_badge">🧭 دليلك نحو الاحتراف</span>
+<h1 data-i18n-html="tracks_hero_title">اختر <span>مسارك</span>... وابدأ رحلتك التدريبية</h1>
+<p data-i18n="tracks_hero_desc">مسارات تدريبية متكاملة موزعة على تخصصات متعددة، تنقلك خطوة بخطوة من التأسيس إلى التمكين فالتمتين، بقيادة نخبة من المدربين المعتمدين.</p>
+<div class="tracks-hero-stats">
+<div class="thero-stat"><b id="stat-tracks">6</b><span data-i18n="stat_tracks_label">مسارات تدريبية</span></div>
+<div class="thero-stat"><b id="stat-specs">4</b><span data-i18n="stat_specs_label">تخصصات</span></div>
+<div class="thero-stat"><b>+50</b><span data-i18n="stat_hours_label">ساعة تدريب لكل مسار</span></div>
+<div class="thero-stat"><b id="stat-trainers">8</b><span data-i18n="stat_trainers_label">مدربون معتمدون</span></div>
+</div>
+<button type="button" class="scroll-cue" id="scroll-to-tracks"><span data-i18n="scroll_cue">استعرض المسارات</span> ↓</button>
+</div>
+<svg class="tracks-hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" style="width:100%;height:70px;"><path fill="#f7f9fc" d="M0,40 C240,90 480,0 720,30 C960,60 1200,10 1440,45 L1440,90 L0,90 Z"></path></svg>
+</section>
+
+<!-- ================= القسم الثاني: المسارات حسب التخصص ================= -->
+<section class="tracks-body" id="tracks-section">
+<div class="tracks-body-inner">
+<div class="section-heading">
+<span class="eyebrow" data-i18n="tracks_eyebrow">مكتبة المسارات</span>
+<h2 data-i18n="tracks_section_title">مساراتنا التدريبية حسب التخصص</h2>
+<p data-i18n="tracks_section_desc">صفّح المسارات، فلترها حسب التخصص أو المدرب أو نمط التدريب، واضغط على البطاقة لاكتشاف مستوياتها الثلاثة.</p>
+</div>
+
+<div class="filters-bar" id="filters-bar">
+<div class="filter-field">
+<label data-i18n="filter_spec_label">التخصص</label>
+<select id="filter-spec"><option value="all">كل التخصصات</option></select>
+</div>
+<div class="filter-field">
+<label data-i18n="filter_trainer_label">المدرب</label>
+<select id="filter-trainer"><option value="all">كل المدربين</option></select>
+</div>
+<div class="filter-field">
+<label data-i18n="filter_mode_label">نمط التدريب</label>
+<select id="filter-mode">
+<option value="all">الكل</option>
+<option value="عن بعد">عن بعد</option>
+<option value="حضوري">حضوري</option>
+</select>
+</div>
+<div class="filter-field filter-search-wrap-field">
+<label data-i18n="filter_search_label">البحث</label>
+<div class="filter-search-wrap">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+<input type="text" id="filter-search" placeholder="ابحث عن اسم المسار..." data-i18n-placeholder="filter_search_placeholder">
+</div>
+</div>
+<div class="filters-reset"><button id="filters-reset-btn" type="button" data-i18n="filters_reset">↺ إعادة تعيين الفلاتر</button></div>
+</div>
+
+<div class="no-results" id="no-results" data-i18n="no_results">لا توجد مسارات مطابقة لبحثك حالياً، جرّب تعديل الفلاتر.</div>
+
+<div id="specs-container"></div>
+</div>
+</section>
+
+<footer class="main-footer">
+<div class="container">
+<div class="footer-cols">
+<div>
+<div class="footer-logo-wrapper">
+<img src="https://i.postimg.cc/T3zh5Xrq/TOTACADEMY-LOGO.png" alt="Logo" class="footer-logo-img">
+<h3 style="margin:0;font-weight:800;" data-i18n-html="logo_text">TOT<span class="highlight">Academy</span></h3>
+</div>
+<p class="footer-desc" data-i18n="footer_desc">أكاديمية متخصصة في تدريب المدربين وبناء المسارات المهنية عالية الجودة.</p>
+<div class="social-row">
+<a href="https://sites.google.com/view/totacademya/hello" target="_blank" class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+<a href="https://sites.google.com/view/totacademya/hello" target="_blank" class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16m0-16L4 20"></path></svg></a>
+<a href="https://sites.google.com/view/totacademya/hello" target="_blank" class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+<a href="https://sites.google.com/view/totacademya/hello" target="_blank" class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+<a href="https://sites.google.com/view/totacademya/hello" target="_blank" class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+</div>
+</div>
+<div>
+<h4 data-i18n="footer_links_title">روابط هامة</h4>
+<ul class="footer-links">
+<li><a href="https://sites.google.com/view/totacademya/hello" data-i18n="nav_classrooms">الأقسام التعلمية</a></li>
+<li><a href="#" data-i18n="nav_tracks">المسارات التدريبية</a></li>
+<li><a href="https://sites.google.com/view/totacademya/hello">المعسكرات</a></li>
+<li><a href="https://sites.google.com/view/totacademya/hello">شهادات معتمدة</a></li>
+</ul>
+</div>
+<div>
+<h4 data-i18n="footer_contact_title">تواصل معنا</h4>
+<ul class="footer-contact-list">
+<li class="contact-header" data-i18n="footer_phones">أرقام الهاتف:</li>
+<li class="contact-sub-item"><span dir="ltr">0555-989-370</span></li>
+<li class="contact-sub-item"><span dir="ltr">0656-180-056</span></li>
+<li><span>totacademy@gmail.com</span></li>
+<li><span data-i18n="footer_address">شارع العقيد بوقرة، عمارة رقم 13، الأبيار الجزائر العاصمة</span></li>
+</ul>
+</div>
+<div>
+<h4 data-i18n="footer_newsletter_title">النشرة البريدية</h4>
+<p style="font-size:0.9rem;color:rgba(255,255,255,0.7);margin-bottom:15px;" data-i18n="footer_newsletter_desc">اشترك لتصلك دعوات المؤتمرات والندوات</p>
+<div class="newsletter-form">
+<input type="email" class="newsletter-input" id="nl-input">
+<button class="newsletter-btn">→</button>
+</div>
+</div>
+</div>
+<div class="copyright">
+<span data-i18n="footer_copy1">أكاديمية تدريب المدربين -- استثمر شغفك واصنع الأثر . جميع الحقوق محفوظة</span><br>
+<span style="display:inline-block;margin-top:8px;" data-i18n="footer_copy2">تصميم وتطوير الأستاذ بلال عويش</span>
+</div>
+</footer>
+
+<nav class="mobile-bottom-nav" id="mobile-bottom-nav">
+<a href="https://sites.google.com/view/totacademya/totacademy" class="bottom-nav-item active"><svg class="bottom-nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.8 12 3l9 7.8"></path><path d="M5.5 9.5V21h13V9.5"></path><path d="M9.5 21v-7h5v7"></path></svg><span class="bottom-nav-text" data-i18n="bottom_nav_home">الرئيسية</span></a>
+<a href="#tracks-section" class="bottom-nav-item"><span class="bottom-nav-icon">🗂️</span><span class="bottom-nav-text" data-i18n="bottom_nav_sections">الأقسام</span></a>
+<a href="https://sites.google.com/view/totacademya/totacademy" class="bottom-nav-item"><span class="bottom-nav-icon">📚</span><span class="bottom-nav-text" data-i18n="bottom_nav_library">المكتبة</span></a>
+<a href="https://sites.google.com/view/totacademya/totacademy" class="bottom-nav-item"><span class="bottom-nav-icon">📅</span><span class="bottom-nav-text" data-i18n="bottom_nav_schedule">المواعيد</span></a>
+<a href="https://sites.google.com/view/totacademya/totacademy" class="bottom-nav-item"><span class="bottom-nav-icon">🎥</span><span class="bottom-nav-text" data-i18n="bottom_nav_videos">الفيديوهات</span></a>
+<a href="https://sites.google.com/view/totacademya/totacademy" class="bottom-nav-item"><span class="bottom-nav-icon">📰</span><span class="bottom-nav-text" data-i18n="bottom_nav_news">الأخبار</span></a>
+</nav>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to Top">↑</button>
+
+<script>
+const coreI18n = {
+  ar: {
+    top_signup: "التسجيل", nav_classrooms: "الأقسام التعلمية", nav_workshops: "ورش العمل", nav_bootcamps: "المعسكرات", nav_diplomas: "شهادات معتمدة", nav_tracks: "المسارات التدريبية",
+    logo_text: "التخصصات تدريبية/TOT<span class='highlight'>Academy</span>",
+    tracks_orbit_tech: "تكنولوجيا", tracks_orbit_marketing: "تسويق", tracks_orbit_media: "إعلام واتصال", tracks_orbit_creativity: "ابتكار وإبداع",
+    tracks_hero_badge: "🧭 دليلك نحو الاحتراف",
+    tracks_hero_title: "اختر <span>مسارك</span>... وابدأ رحلتك التدريبية",
+    tracks_hero_desc: "مسارات تدريبية متكاملة موزعة على تخصصات متعددة، تنقلك خطوة بخطوة من التأسيس إلى التمكين فالتمتين، بقيادة نخبة من المدربين المعتمدين.",
+    stat_tracks_label: "مسارات تدريبية", stat_specs_label: "تخصصات", stat_hours_label: "ساعة تدريب لكل مسار", stat_trainers_label: "مدربون معتمدون",
+    scroll_cue: "استعرض المسارات",
+    tracks_eyebrow: "مكتبة المسارات",
+    tracks_section_title: "مساراتنا التدريبية حسب التخصص",
+    tracks_section_desc: "صفّح المسارات، فلترها حسب التخصص أو المدرب أو نمط التدريب، واضغط على البطاقة لاكتشاف مستوياتها الثلاثة.",
+    filter_spec_label: "التخصص", filter_trainer_label: "المدرب", filter_mode_label: "نمط التدريب", filter_search_label: "البحث",
+    filter_all_specs: "كل التخصصات", filter_all_trainers: "كل المدربين", filter_all: "الكل",
+    filter_mode_remote: "عن بعد", filter_mode_onsite: "حضوري",
+    filter_search_placeholder: "ابحث عن اسم المسار...",
+    filters_reset: "↺ إعادة تعيين الفلاتر",
+    no_results: "لا توجد مسارات مطابقة لبحثك حالياً، جرّب تعديل الفلاتر.",
+    spec_tracks_suffix: "مسار تدريبي",
+    fc_trainers_label: "المدربون",
+    fc_cta: "اطلع على المقاييس والمستويات",
+    fc_metrics_title: "المقاييس",
+    level_foundation: "تأسيس", level_enable: "تمكين", level_reinforce: "تمتين",
+    fc_back_cta: "بدأ التدريب",
+    fc_close_aria: "رجوع",
+    start_training_alert: "بدأ التدريب: ",
+    footer_desc: "أكاديمية متخصصة في تدريب المدربين وبناء المسارات المهنية عالية الجودة.",
+    footer_links_title: "روابط هامة", footer_contact_title: "تواصل معنا", footer_phones: "أرقام الهاتف:",
+    footer_address: "شارع العقيد بوقرة، عمارة رقم 13، الأبيار الجزائر العاصمة",
+    footer_newsletter_title: "النشرة البريدية", footer_newsletter_desc: "اشترك لتصلك دعوات المؤتمرات والندوات",
+    footer_copy1: "أكاديمية تدريب المدربين -- استثمر شغفك واصنع الأثر . جميع الحقوق محفوظة",
+    footer_copy2: "تصميم وتطوير الأستاذ بلال عويش",
+    bottom_nav_home: "الرئيسية", bottom_nav_sections: "الأقسام", bottom_nav_library: "المكتبة", bottom_nav_schedule: "المواعيد", bottom_nav_videos: "الفيديوهات", bottom_nav_news: "الأخبار"
+  },
+  en: {
+    top_signup: "Sign Up", nav_classrooms: "Classrooms", nav_tracks: "Training Tracks",
+    logo_text: "TOT<span class='highlight'>Academy/Training specializations</span>",
+    tracks_orbit_tech: "Technology", tracks_orbit_marketing: "Marketing", tracks_orbit_media: "Media & Communication", tracks_orbit_creativity: "Innovation & Creativity",
+    tracks_hero_badge: "🧭 Your guide to mastery",
+    tracks_hero_title: "Choose <span>Your Track</span>... and start your training journey",
+    tracks_hero_desc: "Comprehensive training tracks across multiple specializations, guiding you step by step from foundation to enablement to reinforcement, led by a team of certified trainers.",
+    stat_tracks_label: "Training Tracks", stat_specs_label: "Specializations", stat_hours_label: "training hours per track", stat_trainers_label: "Certified Trainers",
+    scroll_cue: "Explore Tracks",
+    tracks_eyebrow: "Track Library",
+    tracks_section_title: "Our Training Tracks by Specialization",
+    tracks_section_desc: "Browse the tracks, filter by specialization, trainer, or training mode, and click a card to discover its three levels.",
+    filter_spec_label: "Specialization", filter_trainer_label: "Trainer", filter_mode_label: "Training Mode", filter_search_label: "Search",
+    filter_all_specs: "All Specializations", filter_all_trainers: "All Trainers", filter_all: "All",
+    filter_mode_remote: "Remote", filter_mode_onsite: "In-person",
+    filter_search_placeholder: "Search track name...",
+    filters_reset: "↺ Reset Filters",
+    no_results: "No tracks match your search. Try adjusting the filters.",
+    spec_tracks_suffix: "training tracks",
+    fc_trainers_label: "Trainers",
+    fc_cta: "View Metrics & Levels",
+    fc_metrics_title: "Metrics",
+    level_foundation: "Foundation", level_enable: "Enablement", level_reinforce: "Reinforcement",
+    fc_back_cta: "Start Training",
+    fc_close_aria: "Close",
+    start_training_alert: "Start training: ",
+    footer_desc: "An academy specialized in training trainers and building high-quality professional tracks.",
+    footer_links_title: "Important Links", footer_contact_title: "Contact Us", footer_phones: "Phone Numbers:",
+    footer_address: "Col. Bougara St, Bldg 13, El Biar, Algiers",
+    footer_newsletter_title: "Newsletter", footer_newsletter_desc: "Subscribe to receive conference and seminar invitations",
+    footer_copy1: "TOT Academy -- Invest your passion and make an impact. All rights reserved",
+    footer_copy2: "Designed & Developed by Prof. Bilal Aouiche",
+    bottom_nav_home: "Home", bottom_nav_sections: "Sections", bottom_nav_library: "Library", bottom_nav_schedule: "Schedule", bottom_nav_videos: "Videos", bottom_nav_news: "News"
+  },
+  fr: {
+    top_signup: "S'inscrire", nav_classrooms: "Classrooms", nav_tracks: "Parcours de formation",
+    logo_text: "TOT<span class='highlight'>Academy/Spécialisations de formation</span>",
+    tracks_orbit_tech: "Technologie", tracks_orbit_marketing: "Marketing", tracks_orbit_media: "Médias & Communication", tracks_orbit_creativity: "Innovation & Créativité",
+    tracks_hero_badge: "🧭 Votre guide vers la maîtrise",
+    tracks_hero_title: "Choisissez <span>votre parcours</span>... et démarrez votre formation",
+    tracks_hero_desc: "Des parcours de formation complets répartis sur plusieurs spécialités, qui vous guident étape par étape de la fondation à l'habilitation puis au renforcement, encadrés par une équipe de formateurs certifiés.",
+    stat_tracks_label: "Parcours de formation", stat_specs_label: "Spécialités", stat_hours_label: "heures de formation par parcours", stat_trainers_label: "Formateurs certifiés",
+    scroll_cue: "Explorer les parcours",
+    tracks_eyebrow: "Bibliothèque des parcours",
+    tracks_section_title: "Nos parcours de formation par spécialité",
+    tracks_section_desc: "Parcourez les parcours, filtrez par spécialité, formateur ou mode de formation, et cliquez sur une carte pour découvrir ses trois niveaux.",
+    filter_spec_label: "Spécialité", filter_trainer_label: "Formateur", filter_mode_label: "Mode de formation", filter_search_label: "Recherche",
+    filter_all_specs: "Toutes les spécialités", filter_all_trainers: "Tous les formateurs", filter_all: "Tous",
+    filter_mode_remote: "À distance", filter_mode_onsite: "Présentiel",
+    filter_search_placeholder: "Rechercher un parcours...",
+    filters_reset: "↺ Réinitialiser les filtres",
+    no_results: "Aucun parcours ne correspond à votre recherche. Essayez de modifier les filtres.",
+    spec_tracks_suffix: "parcours de formation",
+    fc_trainers_label: "Formateurs",
+    fc_cta: "Découvrir les indicateurs et niveaux",
+    fc_metrics_title: "Indicateurs",
+    level_foundation: "Fondation", level_enable: "Habilitation", level_reinforce: "Renforcement",
+    fc_back_cta: "Commencer la formation",
+    fc_close_aria: "Fermer",
+    start_training_alert: "Démarrage de la formation : ",
+    footer_desc: "Une académie spécialisée dans la formation des formateurs et la création de parcours professionnels de haute qualité.",
+    footer_links_title: "Liens Importants", footer_contact_title: "Contactez-nous", footer_phones: "Téléphones:",
+    footer_address: "Rue Col. Bougara, Bât 13, El Biar, Alger",
+    footer_newsletter_title: "Newsletter", footer_newsletter_desc: "Abonnez-vous pour recevoir nos invitations",
+    footer_copy1: "TOT Academy -- Investissez votre passion et créez l'impact. Tous droits réservés",
+    footer_copy2: "Conçu & Développé par Prof. Bilal Aouiche",
+    bottom_nav_home: "Accueil", bottom_nav_sections: "Sections", bottom_nav_library: "Bibliothèque", bottom_nav_schedule: "Agenda", bottom_nav_videos: "Vidéos", bottom_nav_news: "Actualités"
+  }
+};
+
+const SPECIALIZATIONS = [
+  {
+    key: "tech", icon: "💻", color: "#1152cf",
+    name: { ar: "تكنولوجيا", en: "Technology", fr: "Technologie" },
+    tracks: [
+      {
+        title: { ar: "مسار تدريب المدربين في الذكاء الاصطناعي التوليدي", en: "Trainer Training Track in Generative Artificial Intelligence", fr: "Parcours de formation des formateurs en Intelligence artificielle générative" },
+        summary: { ar: "رحلة تدريبية شاملة لاحتراف الذكاء الاصطناعي التوليدي وتطبيقاته في الأتمتة والإبداع والأعمال.", en: "A comprehensive training journey to master generative AI and its applications in automation, creativity, and business.", fr: "Un parcours de formation complet pour maîtriser l'IA générative et ses applications dans l'automatisation, la créativité et les affaires." },
+        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&q=80",
+        status: { ar: "متاح", en: "Available", fr: "Disponible" }, statusKey: "available",
+        duration: 60, mode: { ar: "عن بعد", en: "Remote", fr: "À distance" }, modeKey: "remote",
+        trainers: [
+          {name:"كريم زروقي", img:"https://i.pravatar.cc/60?img=22"},
+          {name:"نور الهدى صالحي", img:"https://i.pravatar.cc/60?img=44"},
+          {name:"عادل بلحاج", img:"https://i.pravatar.cc/60?img=8"},
+          {name:"إيمان تواتي", img:"https://i.pravatar.cc/60?img=39"}
+        ],
+        levels: {
+          foundation: {
+            ar: ["مفاهيم الذكاء","هندسة الأوامر","توليد النصوص","توليد الصور","أخلاقيات الاستخدام","الأتمتة البسيطة","التعلم الآلي","التطبيقات اليومية"],
+            en: ["AI Concepts","Prompt Engineering","Text Generation","Image Generation","Usage Ethics","Basic Automation","Machine Learning","Everyday Applications"],
+            fr: ["Concepts de l'IA","Ingénierie des prompts","Génération de texte","Génération d'images","Éthique d'utilisation","Automatisation simple","Apprentissage automatique","Applications quotidiennes"]
+          },
+          enable: {
+            ar: ["الأوامر المتقدمة","دمج الواجهات (API)","تحليل البيانات","تدريب النماذج","الذكاء التسويقي","الذكاء التعليمي","توليد الفيديو","تحسين الإنتاجية"],
+            en: ["Advanced Prompting","API Integration","Data Analysis","Model Training","Marketing Intelligence","Educational Intelligence","Video Generation","Productivity Optimization"],
+            fr: ["Prompts avancés","Intégration d'API","Analyse de données","Entraînement de modèles","Intelligence marketing","Intelligence éducative","Génération de vidéo","Optimisation de la productivité"]
+          },
+          reinforce: {
+            ar: ["بناء وكلاء الذكاء","التحول الرقمي","تصميم مناهج AI","إدارة المشاريع","تقييم النماذج","أمن الذكاء","ابتكار الحلول","تقديم الاستشارات"],
+            en: ["Building AI Agents","Digital Transformation","AI Curriculum Design","Project Management","Model Evaluation","AI Security","Solution Innovation","Consulting"],
+            fr: ["Création d'agents IA","Transformation numérique","Conception de programmes IA","Gestion de projets","Évaluation des modèles","Sécurité de l'IA","Innovation de solutions","Conseil"]
+          }
+        }
+      },
+      {
+        title: { ar: "مسار تدريب المدربين في البرمجة بدون كود", en: "Trainer Training Track in No-Code Development", fr: "Parcours de formation des formateurs en Développement sans code (No-Code)" },
+        summary: { ar: "تعلم بناء تطبيقات وأنظمة متكاملة دون كتابة كود عبر أدوات اللاكود الحديثة.", en: "Learn to build integrated apps and systems without writing code, using modern no-code tools.", fr: "Apprenez à créer des applications et systèmes intégrés sans écrire de code, grâce aux outils No-Code modernes." },
+        image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=700&q=80",
+        status: { ar: "متاح", en: "Available", fr: "Disponible" }, statusKey: "available",
+        duration: 65, mode: { ar: "عن بعد", en: "Remote", fr: "À distance" }, modeKey: "remote",
+        trainers: [
+          {name:"يوسف حمدي", img:"https://i.pravatar.cc/60?img=15"},
+          {name:"كريم زروقي", img:"https://i.pravatar.cc/60?img=22"},
+          {name:"نور الهدى صالحي", img:"https://i.pravatar.cc/60?img=44"},
+          {name:"أحمد بن الشيخ", img:"https://i.pravatar.cc/60?img=12"}
+        ],
+        levels: {
+          foundation: {
+            ar: ["مفهوم اللاكود","قواعد البيانات","واجهات المستخدم","تصميم النماذج","ربط المنصات","صفحات الهبوط","تطبيقات الويب","الاستضافة"],
+            en: ["No-Code Concept","Databases","User Interfaces","Form Design","Platform Integration","Landing Pages","Web Apps","Hosting"],
+            fr: ["Concept du No-Code","Bases de données","Interfaces utilisateur","Conception de formulaires","Intégration de plateformes","Pages d'atterrissage","Applications web","Hébergement"]
+          },
+          enable: {
+            ar: ["تطوير تطبيقات الجوال","الأتمتة المعقدة","إدارة البيانات","بوابات الدفع","تخصيص القوالب","تحسين الأداء","ربط التطبيقات","اختبار الاستخدام"],
+            en: ["Mobile App Development","Complex Automation","Data Management","Payment Gateways","Template Customization","Performance Optimization","App Integration","Usability Testing"],
+            fr: ["Développement d'applications mobiles","Automatisation complexe","Gestion des données","Passerelles de paiement","Personnalisation de modèles","Optimisation des performances","Intégration d'applications","Tests d'utilisabilité"]
+          },
+          reinforce: {
+            ar: ["بناء منصات متكاملة","هندسة النظم","أمان التطبيقات","تسعير المشاريع","تدريب المطورين","دورة الحياة","ابتكار المنتجات","الاستشارات التقنية"],
+            en: ["Building Integrated Platforms","Systems Engineering","App Security","Project Pricing","Developer Training","Lifecycle Management","Product Innovation","Technical Consulting"],
+            fr: ["Création de plateformes intégrées","Ingénierie des systèmes","Sécurité des applications","Tarification de projets","Formation des développeurs","Gestion du cycle de vie","Innovation produit","Conseil technique"]
+          }
+        }
+      },
+      {
+        title: { ar: "مسار تدريب المدربين في تحليل البيانات وذكاء الأعمال", en: "Trainer Training Track in Data Analysis & Business Intelligence", fr: "Parcours de formation des formateurs en Analyse de données et intelligence d'affaires" },
+        summary: { ar: "امتلك مهارات تحليل البيانات واتخاذ القرار الذكي عبر أدوات ولوحات القيادة.", en: "Master data analysis skills and smart decision-making using tools and dashboards.", fr: "Maîtrisez les compétences d'analyse de données et de prise de décision intelligente grâce aux outils et tableaux de bord." },
+        image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=700&q=80",
+        status: { ar: "متاح", en: "Available", fr: "Disponible" }, statusKey: "available",
+        duration: 62, mode: { ar: "حضوري", en: "In-person", fr: "Présentiel" }, modeKey: "onsite",
+        trainers: [
+          {name:"لينة بوزيان", img:"https://i.pravatar.cc/60?img=32"},
+          {name:"نور الهدى صالحي", img:"https://i.pravatar.cc/60?img=44"},
+          {name:"إيمان تواتي", img:"https://i.pravatar.cc/60?img=39"},
+          {name:"سارة مرابط", img:"https://i.pravatar.cc/60?img=47"}
+        ],
+        levels: {
+          foundation: {
+            ar: ["مفاهيم البيانات","جمع البيانات","التنظيف","أساسيات إكسيل","الإحصاء الوصفي","المخططات","لوحات القيادة","أمان البيانات"],
+            en: ["Data Concepts","Data Collection","Data Cleaning","Excel Basics","Descriptive Statistics","Charts","Dashboards","Data Security"],
+            fr: ["Concepts de données","Collecte de données","Nettoyage des données","Bases d'Excel","Statistiques descriptives","Graphiques","Tableaux de bord","Sécurité des données"]
+          },
+          enable: {
+            ar: ["التحليل المتقدم","استخدام SQL","أدوات BI","تصور البيانات","اكتشاف الأنماط","التنبؤ البسيط","إعداد التقارير","تحليل سلوك المستخدم"],
+            en: ["Advanced Analysis","Using SQL","BI Tools","Data Visualization","Pattern Discovery","Basic Forecasting","Reporting","User Behavior Analysis"],
+            fr: ["Analyse avancée","Utilisation de SQL","Outils BI","Visualisation de données","Découverte de tendances","Prévision simple","Rapports","Analyse du comportement utilisateur"]
+          },
+          reinforce: {
+            ar: ["علم البيانات","النمذجة التنبؤية","قرارات البيانات","تدريب المحللين","إدارة المشاريع","حوكمة البيانات","استشارات الأعمال","مؤشرات الأداء"],
+            en: ["Data Science","Predictive Modeling","Data-Driven Decisions","Analyst Training","Project Management","Data Governance","Business Consulting","KPIs"],
+            fr: ["Science des données","Modélisation prédictive","Décisions basées sur les données","Formation des analystes","Gestion de projets","Gouvernance des données","Conseil aux entreprises","Indicateurs de performance (KPI)"]
+          }
+        }
+      }
+    ]
+  },
+  {
+    key: "marketing", icon: "📈", color: "#d5803b",
+    name: { ar: "تسويق", en: "Marketing", fr: "Marketing" },
+    tracks: [
+      {
+        title: { ar: "مسار تدريب المدربين في التسويق الإلكتروني", en: "Trainer Training Track in Digital Marketing", fr: "Parcours de formation des formateurs en Marketing électronique" },
+        summary: { ar: "دليلك العملي لبناء استراتيجيات تسويق رقمي فعّالة وقياس الأداء وتحقيق النمو.", en: "Your practical guide to building effective digital marketing strategies, measuring performance, and achieving growth.", fr: "Votre guide pratique pour élaborer des stratégies de marketing numérique efficaces, mesurer la performance et générer de la croissance." },
+        image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=700&q=80",
+        status: { ar: "مكتمل", en: "Completed", fr: "Complet" }, statusKey: "completed",
+        duration: 50, mode: { ar: "عن بعد", en: "Remote", fr: "À distance" }, modeKey: "remote",
+        trainers: [
+          {name:"سارة مرابط", img:"https://i.pravatar.cc/60?img=47"},
+          {name:"لينة بوزيان", img:"https://i.pravatar.cc/60?img=32"},
+          {name:"نور الهدى صالحي", img:"https://i.pravatar.cc/60?img=44"},
+          {name:"إيمان تواتي", img:"https://i.pravatar.cc/60?img=39"}
+        ],
+        levels: {
+          foundation: {
+            ar: ["أساسيات التسويق","سلوك المستهلك","المزيج التسويقي","إدارة المنصات","كتابة الإعلانات","التصميم التسويقي","أدوات النشر","قياس التفاعل"],
+            en: ["Marketing Fundamentals","Consumer Behavior","Marketing Mix","Platform Management","Ad Copywriting","Marketing Design","Publishing Tools","Engagement Measurement"],
+            fr: ["Fondamentaux du marketing","Comportement du consommateur","Mix marketing","Gestion des plateformes","Rédaction publicitaire","Design marketing","Outils de publication","Mesure de l'engagement"]
+          },
+          enable: {
+            ar: ["إعلانات السوشيال","إعلانات جوجل","التسويق بالبريد","التسويق بالعمولة","مسارات البيع (Funnels)","تحليل الحملات","الأتمتة","إدارة الميزانيات"],
+            en: ["Social Media Ads","Google Ads","Email Marketing","Affiliate Marketing","Sales Funnels","Campaign Analysis","Automation","Budget Management"],
+            fr: ["Publicités sur les réseaux sociaux","Google Ads","Marketing par e-mail","Marketing d'affiliation","Tunnels de vente","Analyse des campagnes","Automatisation","Gestion des budgets"]
+          },
+          reinforce: {
+            ar: ["استراتيجيات التسويق","اختراق النمو (Growth Hacking)","تحليل العائد","التسويق B2B","إدارة الفرق","تصميم الحملات","الاستشارات","بناء العلامة"],
+            en: ["Marketing Strategies","Growth Hacking","ROI Analysis","B2B Marketing","Team Management","Campaign Design","Consulting","Brand Building"],
+            fr: ["Stratégies marketing","Growth Hacking","Analyse du ROI","Marketing B2B","Gestion d'équipes","Conception de campagnes","Conseil","Construction de marque"]
+          }
+        }
+      }
+    ]
+  },
+  {
+    key: "media", icon: "🎙️", color: "#e56458",
+    name: { ar: "إعلام واتصال", en: "Media & Communication", fr: "Médias & Communication" },
+    tracks: [
+      {
+        title: { ar: "مسار تدريب المدربين في الإعلام الرقمي وصحافة الويب", en: "Trainer Training Track in Digital Media & Web Journalism", fr: "Parcours de formation des formateurs en Médias numériques et journalisme web" },
+        summary: { ar: "مسار متكامل لتكوين صحفيين ومحتوى رقمي محترفين، من الأساسيات إلى الاستقصاء والتحرير المتقدم.", en: "A comprehensive track to train professional journalists and digital content creators, from basics to investigative and advanced editing.", fr: "Un parcours complet pour former des journalistes et créateurs de contenu numérique professionnels, des bases jusqu'à l'investigation et l'édition avancée." },
+        image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=700&q=80",
+        status: { ar: "متاح", en: "Available", fr: "Disponible" }, statusKey: "available",
+        duration: 55, mode: { ar: "حضوري", en: "In-person", fr: "Présentiel" }, modeKey: "onsite",
+        trainers: [
+          {name:"أحمد بن الشيخ", img:"https://i.pravatar.cc/60?img=12"},
+          {name:"سارة مرابط", img:"https://i.pravatar.cc/60?img=47"},
+          {name:"يوسف حمدي", img:"https://i.pravatar.cc/60?img=15"},
+          {name:"لينة بوزيان", img:"https://i.pravatar.cc/60?img=32"}
+        ],
+        levels: {
+          foundation: {
+            ar: ["مدخل للإعلام","أخلاقيات النشر","جمع الأخبار","التحرير الأساسي","التصوير الصحفي","المنصات الرقمية","تحليل الجمهور","صياقة العناوين"],
+            en: ["Introduction to Media","Publishing Ethics","News Gathering","Basic Editing","Photojournalism","Digital Platforms","Audience Analysis","Headline Writing"],
+            fr: ["Introduction aux médias","Éthique de la publication","Collecte de l'information","Édition de base","Photojournalisme","Plateformes numériques","Analyse de l'audience","Rédaction de titres"]
+          },
+          enable: {
+            ar: ["السرد القصصي","صحافة الموبايل","إدارة المقابلات","التحقق من الأخبار","السيو (SEO) للصحافة","البيانات الصحفية","البودكاست","التفطية المباشرة"],
+            en: ["Storytelling","Mobile Journalism","Interview Management","Fact-Checking","SEO for Journalism","Press Releases","Podcasting","Live Coverage"],
+            fr: ["Narration (Storytelling)","Journalisme mobile","Gestion des interviews","Vérification des faits","SEO pour le journalisme","Communiqués de presse","Podcast","Couverture en direct"]
+          },
+          reinforce: {
+            ar: ["إدارة فرف الأخبار","الصحافة الاستقصائية","استراتيجيات النشر","تدريب المراسلين","تقييم الأداء","إدارة الأزمات","تصميم المناهج","تسويق المحتوى"],
+            en: ["Newsroom Management","Investigative Journalism","Publishing Strategies","Correspondent Training","Performance Evaluation","Crisis Management","Curriculum Design","Content Marketing"],
+            fr: ["Gestion des salles de rédaction","Journalisme d'investigation","Stratégies de publication","Formation des correspondants","Évaluation de la performance","Gestion de crise","Conception de programmes","Marketing de contenu"]
+          }
+        }
+      }
+    ]
+  },
+  {
+    key: "creativity", icon: "💡", color: "#8b5cf6",
+    name: { ar: "ابتكار وإبداع", en: "Innovation & Creativity", fr: "Innovation & Créativité" },
+    tracks: [
+      {
+        title: { ar: "مسار تدريب المدربين في صناعة المحتوى الإبداعي", en: "Trainer Training Track in Creative Content Production", fr: "Parcours de formation des formateurs en Production de contenu créatif" },
+        summary: { ar: "اكتشف أدوات صناعة المحتوى الإبداعي من التصوير والمونتاج إلى الاستراتيجية وتحقيق الدخل.", en: "Discover the tools of creative content production, from filming and editing to strategy and monetization.", fr: "Découvrez les outils de production de contenu créatif, du tournage et du montage jusqu'à la stratégie et la monétisation." },
+        image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=700&q=80",
+        status: { ar: "متاح", en: "Available", fr: "Disponible" }, statusKey: "available",
+        duration: 58, mode: { ar: "حضوري", en: "In-person", fr: "Présentiel" }, modeKey: "onsite",
+        trainers: [
+          {name:"أحمد بن الشيخ", img:"https://i.pravatar.cc/60?img=12"},
+          {name:"يوسف حمدي", img:"https://i.pravatar.cc/60?img=15"},
+          {name:"كريم زروقي", img:"https://i.pravatar.cc/60?img=22"},
+          {name:"عادل بلحاج", img:"https://i.pravatar.cc/60?img=8"}
+        ],
+        levels: {
+          foundation: {
+            ar: ["أنواع المحتوى","العصف الذهني","كتابة السيناريو","أساسيات التصوير","المونتاج البسيط","الهوية البصرية","الإضاءة","تسجيل الصوت"],
+            en: ["Content Types","Brainstorming","Scriptwriting","Photography Basics","Basic Editing","Visual Identity","Lighting","Audio Recording"],
+            fr: ["Types de contenu","Brainstorming","Écriture de scénario","Bases de la photographie","Montage simple","Identité visuelle","Éclairage","Enregistrement audio"]
+          },
+          enable: {
+            ar: ["صناعة الريلز","السرد البصري","المونتاج المتقدم","الصور المصفرة","خوارزميات المنصات","البث المباشر","إدارة القنوات","التفاعل الجماهيري"],
+            en: ["Reels Production","Visual Storytelling","Advanced Editing","Thumbnails","Platform Algorithms","Livestreaming","Channel Management","Audience Engagement"],
+            fr: ["Production de Reels","Narration visuelle","Montage avancé","Miniatures","Algorithmes des plateformes","Diffusion en direct","Gestion des chaînes","Engagement du public"]
+          },
+          reinforce: {
+            ar: ["استراتيجية المحتوى","تحقيق الدخل","رعاية العلامات","إدارة الفرق","التحليل المتقدم","تصميم ورش العمل","حقوق الملكية","بناء المجتمعات"],
+            en: ["Content Strategy","Monetization","Brand Sponsorships","Team Management","Advanced Analytics","Workshop Design","Copyright","Community Building"],
+            fr: ["Stratégie de contenu","Monétisation","Partenariats de marque","Gestion d'équipes","Analyse avancée","Conception d'ateliers","Droits d'auteur","Construction de communautés"]
+          }
+        }
+      }
+    ]
+  }
+];
+
+var currentLang = 'ar';
+
+const TRAINER_NAMES = {
+  "كريم زروقي": { en: "Karim Zerrougui", fr: "Karim Zerrougui" },
+  "نور الهدى صالحي": { en: "Nour El Houda Salhi", fr: "Nour El Houda Salhi" },
+  "عادل بلحاج": { en: "Adel Belhadj", fr: "Adel Belhadj" },
+  "إيمان تواتي": { en: "Imane Touati", fr: "Imane Touati" },
+  "يوسف حمدي": { en: "Youcef Hamdi", fr: "Youcef Hamdi" },
+  "أحمد بن الشيخ": { en: "Ahmed Bencheikh", fr: "Ahmed Bencheikh" },
+  "لينة بوزيان": { en: "Lina Bouziane", fr: "Lina Bouziane" },
+  "سارة مرابط": { en: "Sara Merabet", fr: "Sara Merabet" }
+};
+
+function trainerName(tr) {
+  if (currentLang === 'ar') return tr.name;
+  var localized = TRAINER_NAMES[tr.name];
+  return (localized && localized[currentLang]) || tr.name;
+}
+
+function t(key) {
+  return (coreI18n[currentLang] && coreI18n[currentLang][key]) || (coreI18n.ar && coreI18n.ar[key]) || '';
+}
+
+function trainersHtml(trainers) {
+  return trainers.map(function (tr) {
+    var url = tr.url || 'https://sites.google.com/view/totacademya/hello';
+    var displayName = trainerName(tr);
+    return '<a href="' + url + '" target="_blank" class="fc-trainer-link" onclick="event.stopPropagation();"><img src="' + tr.img + '" alt="' + displayName + '" loading="lazy"><span>' + displayName + '</span></a>';
+  }).join('');
+}
+
+var METRIC_ICONS = ['\ud83c\udfaf','\ud83d\udcca','\ud83e\udde9','\ud83d\udee0','\ud83d\udcc8','\ud83d\udd0d','\ud83d\udca1','\u2705'];
+function metricsHtml(list) {
+  return list.map(function (m, i) {
+    var icon = METRIC_ICONS[i % METRIC_ICONS.length];
+    return '<div class="fc-metric"><span class="metric-ico">' + icon + '</span><span>' + m + '</span></div>';
+  }).join('');
+}
+
+function durationLabel(track) {
+  var unit = currentLang === 'ar' ? '\u0633\u0627' : (currentLang === 'fr' ? 'h' : 'hrs');
+  return track.duration + ' ' + unit;
+}
+
+function cardHtml(track, spec) {
+  var statusClass = track.statusKey === 'completed' ? ' completed' : '';
+  var title = track.title[currentLang] || track.title.ar;
+  var specName = spec.name[currentLang] || spec.name.ar;
+  var trackUrl = track.url || 'https://sites.google.com/view/totacademya/totf126';
+  return (
+    '<div class="flip-card theme-' + spec.key + '" data-track-title-ar="' + track.title.ar.replace(/"/g, '&quot;') + '" data-spec="' + spec.key + '" data-mode="' + track.modeKey + '" data-trainers="' + track.trainers.map(function(tr){return trainerName(tr);}).join('|') + '">' +
+    '<div class="flip-card-inner">' +
+      '<div class="flip-face flip-front">' +
+        '<div class="fc-banner">' +
+          '<img src="' + track.image + '" alt="' + title + '" loading="lazy">' +
+          '<div class="fc-overlay"></div>' +
+          '<div class="fc-banner-top">' +
+            '<span class="fc-status' + statusClass + '">' + (track.status[currentLang] || track.status.ar) + '</span>' +
+            '<span class="fc-spec-badge">' + spec.icon + ' ' + specName + '</span>' +
+          '</div>' +
+          '<div class="fc-banner-title">' + title + '</div>' +
+        '</div>' +
+        '<div class="fc-body">' +
+          '<p class="fc-summary">' + (track.summary[currentLang] || track.summary.ar) + '</p>' +
+          '<div class="fc-meta-row"><span>\u23f1 ' + durationLabel(track) + '</span><span>' + (track.mode[currentLang] || track.mode.ar) + '</span></div>' +
+          '<div class="fc-trainers-label">' + t('fc_trainers_label') + '</div>' +
+          '<div class="fc-trainers">' + trainersHtml(track.trainers) + '</div>' +
+          '<button type="button" class="fc-cta fc-flip-trigger">' + t('fc_cta') + '</button>' +
+        '</div>' +
+      '</div>' +
+      '<div class="flip-face flip-back fc-back-face">' +
+        '<button type="button" class="fc-flip-close" aria-label="' + t('fc_close_aria') + '">\u2715</button>' +
+        '<div class="fc-back-head">' +
+          '<div class="fc-back-title">' + title + '</div>' +
+          '<div class="fc-levels">' +
+            '<button type="button" class="fc-level-btn active" data-level="foundation">' + t('level_foundation') + '</button>' +
+            '<button type="button" class="fc-level-btn" data-level="enable">' + t('level_enable') + '</button>' +
+            '<button type="button" class="fc-level-btn" data-level="reinforce">' + t('level_reinforce') + '</button>' +
+          '</div>' +
+          '<div class="fc-metrics-title">' + t('fc_metrics_title') + '</div>' +
+        '</div>' +
+        '<div class="fc-metrics" data-metrics-for="foundation">' + metricsHtml(track.levels.foundation[currentLang] || track.levels.foundation.ar) + '</div>' +
+        '<div class="fc-back-footer"><a href="' + trackUrl + '" target="_blank" class="fc-cta fc-back-cta" onclick="event.stopPropagation();">' + t('fc_back_cta') + '</a></div>' +
+      '</div>' +
+    '</div>' +
+    '</div>'
+  );
+}
+
+var sliderInstances = [];
+var flipState = {};
+
+function findTrackBySpecAndTitle(specKey, titleAr) {
+  var spec = SPECIALIZATIONS.find(function (s) { return s.key === specKey; });
+  if (!spec) return null;
+  var track = spec.tracks.find(function (tr) { return tr.title.ar === titleAr; });
+  return track ? { track: track, spec: spec } : null;
+}
+
+function renderSpecsContainer() {
+  var specsContainer = document.getElementById('specs-container');
+  if (!specsContainer) return;
+  specsContainer.innerHTML = '';
+  var sliderIds = [];
+  SPECIALIZATIONS.forEach(function (spec) {
+    var section = document.createElement('div');
+    section.className = 'spec-section';
+    section.setAttribute('data-spec-section', spec.key);
+    var wrapId = 'wrap-' + spec.key;
+    var dotsId = 'dots-' + spec.key;
+    var specName = spec.name[currentLang] || spec.name.ar;
+    section.innerHTML = (
+      '<div class="spec-head spec-head-' + spec.key + '">' +
+        '<div class="spec-icon" style="background:' + spec.color + '">' + spec.icon + '</div>' +
+        '<div><h3>' + specName + '</h3><span>' + spec.tracks.length + ' ' + t('spec_tracks_suffix') + '</span></div>' +
+      '</div>' +
+      '<div class="swipe-container">' +
+        '<div class="swipe-wrapper tracks-swipe-wrapper" id="' + wrapId + '">' +
+          spec.tracks.map(function (tr) { return '<div class="swipe-slide">' + cardHtml(tr, spec) + '</div>'; }).join('') +
+        '</div>' +
+      '</div>' +
+      '<div class="swipe-pagination" id="' + dotsId + '"></div>'
+    );
+    specsContainer.appendChild(section);
+    sliderIds.push({ wrapId: wrapId, dotsId: dotsId });
+  });
+  sliderInstances = [];
+  sliderIds.forEach(function (s) { initSwipeSlider(s.wrapId, s.dotsId); });
+  window.updateAllSliders = function () { sliderInstances.forEach(function (fn) { fn(); }); };
+}
+
+function initSwipeSlider(wrapperId, dotsId) {
+  var wrapper = document.getElementById(wrapperId);
+  var dotsContainer = document.getElementById(dotsId);
+  if (!wrapper) return;
+  var isDragging = false, startX = 0, currentTranslate = 0, prevTranslate = 0, currentIndex = 0, diffX = 0;
+
+  function getSlides() {
+    return Array.from(wrapper.querySelectorAll('.swipe-slide')).filter(function (el) { return getComputedStyle(el).display !== 'none'; });
+  }
+  function updatePos() {
+    if (window.innerWidth >= 992) { wrapper.style.transform = 'none'; return; }
+    var slides = getSlides();
+    if (!slides.length) return;
+    if (currentIndex >= slides.length) currentIndex = slides.length - 1;
+    if (currentIndex < 0) currentIndex = 0;
+    var slideWidth = slides[0].offsetWidth;
+    var wrapperStyle = getComputedStyle(wrapper);
+    var slideGap = parseFloat(wrapperStyle.columnGap || wrapperStyle.gap) || 0;
+    var dirMultiplier = document.documentElement.dir === 'rtl' ? 1 : -1;
+    currentTranslate = currentIndex * (slideWidth + slideGap) * dirMultiplier;
+    prevTranslate = currentTranslate;
+    wrapper.style.transition = 'transform 0.4s cubic-bezier(0.25,0.8,0.25,1)';
+    wrapper.style.transform = 'translateX(' + currentTranslate + 'px)';
+    if (dotsContainer) {
+      dotsContainer.innerHTML = slides.map(function (_, i) {
+        return '<div class="swipe-dot' + (i === currentIndex ? ' active' : '') + '"></div>';
+      }).join('');
+    }
+  }
+  wrapper.addEventListener('touchstart', function (e) {
+    if (window.innerWidth >= 992) return;
+    isDragging = true; startX = e.touches[0].clientX; diffX = 0; wrapper.style.transition = 'none';
+  }, { passive: true });
+  wrapper.addEventListener('touchmove', function (e) {
+    if (!isDragging || window.innerWidth >= 992) return;
+    diffX = e.touches[0].clientX - startX;
+    currentTranslate = prevTranslate + (diffX * -0.5);
+    wrapper.style.transform = 'translateX(' + currentTranslate + 'px)';
+  }, { passive: true });
+  wrapper.addEventListener('touchend', function () {
+    if (!isDragging || window.innerWidth >= 992) return;
+    isDragging = false;
+    var slides = getSlides();
+    var isRTL = document.documentElement.dir === 'rtl';
+    if (isRTL) {
+      if (diffX > 40 && currentIndex < slides.length - 1) currentIndex++;
+      else if (diffX < -40 && currentIndex > 0) currentIndex--;
+    } else {
+      if (diffX < -40 && currentIndex < slides.length - 1) currentIndex++;
+      else if (diffX > 40 && currentIndex > 0) currentIndex--;
+    }
+    updatePos();
+  });
+  window.addEventListener('resize', updatePos);
+  updatePos();
+  sliderInstances.push(updatePos);
+}
+
+function applyFilters() {
+  var specSelect = document.getElementById('filter-spec');
+  var trainerSelect = document.getElementById('filter-trainer');
+  var modeSelect = document.getElementById('filter-mode');
+  var searchInput = document.getElementById('filter-search');
+  var noResults = document.getElementById('no-results');
+  var specVal = specSelect.value;
+  var trainerVal = trainerSelect.value;
+  var modeVal = modeSelect.value;
+  var searchVal = (searchInput.value || '').trim().toLowerCase();
+  var anyVisible = false;
+  document.querySelectorAll('.spec-section').forEach(function (section) {
+    var sectionSpec = section.getAttribute('data-spec-section');
+    var sectionHasVisible = false;
+    if (specVal !== 'all' && specVal !== sectionSpec) {
+      section.classList.add('spec-empty');
+    } else {
+      section.querySelectorAll('.swipe-slide').forEach(function (slide) {
+        var card = slide.querySelector('.flip-card');
+        var titleText = (card.querySelector('.fc-banner-title') ? card.querySelector('.fc-banner-title').textContent : '').toLowerCase();
+        var mode = card.getAttribute('data-mode');
+        var trainers = card.getAttribute('data-trainers') || '';
+        var matches = true;
+        if (modeVal !== 'all' && mode !== modeVal) matches = false;
+        if (trainerVal !== 'all' && trainers.indexOf(trainerVal) === -1) matches = false;
+        if (searchVal && titleText.indexOf(searchVal) === -1) matches = false;
+        slide.style.display = matches ? '' : 'none';
+        if (matches) sectionHasVisible = true;
+      });
+      if (sectionHasVisible) { section.classList.remove('spec-empty'); anyVisible = true; }
+      else { section.classList.add('spec-empty'); }
+    }
+  });
+  noResults.classList.toggle('show', !anyVisible);
+  if (window.updateAllSliders) window.updateAllSliders();
+}
+
+function populateFilterOptions() {
+  var specSelect = document.getElementById('filter-spec');
+  var trainerSelect = document.getElementById('filter-trainer');
+  var modeSelect = document.getElementById('filter-mode');
+  var allTrainers = new Set();
+  var totalTracks = 0;
+  specSelect.innerHTML = '<option value="all">' + t('filter_all_specs') + '</option>';
+  SPECIALIZATIONS.forEach(function (spec) {
+    var opt = document.createElement('option');
+    opt.value = spec.key;
+    opt.textContent = spec.name[currentLang] || spec.name.ar;
+    specSelect.appendChild(opt);
+    spec.tracks.forEach(function (tr) {
+      totalTracks++;
+      tr.trainers.forEach(function (p) { allTrainers.add(trainerName(p)); });
+    });
+  });
+  trainerSelect.innerHTML = '<option value="all">' + t('filter_all_trainers') + '</option>';
+  Array.from(allTrainers).sort().forEach(function (name) {
+    var opt = document.createElement('option');
+    opt.value = name;
+    opt.textContent = name;
+    trainerSelect.appendChild(opt);
+  });
+  modeSelect.innerHTML = '<option value="all">' + t('filter_all') + '</option>' +
+    '<option value="remote">' + t('filter_mode_remote') + '</option>' +
+    '<option value="onsite">' + t('filter_mode_onsite') + '</option>';
+
+  var statTracks = document.getElementById('stat-tracks');
+  var statSpecs = document.getElementById('stat-specs');
+  var statTrainers = document.getElementById('stat-trainers');
+  if (statTracks) statTracks.textContent = totalTracks;
+  if (statSpecs) statSpecs.textContent = SPECIALIZATIONS.length;
+  if (statTrainers) statTrainers.textContent = allTrainers.size;
+}
+
+function updateLangUI() {
+  var select = document.getElementById('lang-switcher');
+  if (!select || select.options.length < 3) return;
+  var isMobile = window.innerWidth <= 768;
+  select.options[0].text = isMobile ? "\ud83c\udde9\ud83c\uddff" : "\ud83c\udde9\ud83c\uddff \u0627\u0644\u0639\u0631\u0628\u064a\u0629";
+  select.options[1].text = isMobile ? "\ud83c\uddec\ud83c\udde7" : "\ud83c\uddec\ud83c\udde7 English";
+  select.options[2].text = isMobile ? "\ud83c\uddeb\ud83c\uddf7" : "\ud83c\uddeb\ud83c\uddf7 Fran\u00e7ais";
+}
+
+function setLanguage(lang) {
+  currentLang = lang;
+  var html = document.documentElement;
+  html.setAttribute('lang', lang);
+  html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+  document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    var key = el.getAttribute('data-i18n');
+    if (coreI18n[lang] && coreI18n[lang][key] !== undefined) { el.textContent = coreI18n[lang][key]; }
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+    var key = el.getAttribute('data-i18n-html');
+    if (coreI18n[lang] && coreI18n[lang][key] !== undefined) { el.innerHTML = coreI18n[lang][key]; }
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+    var key = el.getAttribute('data-i18n-placeholder');
+    if (coreI18n[lang] && coreI18n[lang][key] !== undefined) { el.setAttribute('placeholder', coreI18n[lang][key]); }
+  });
+
+  var select = document.getElementById('lang-switcher');
+  if (select) select.value = lang;
+  updateLangUI();
+
+  populateFilterOptions();
+  renderSpecsContainer();
+  applyFilters();
+
+  var select2 = document.getElementById('lang-switcher');
+  if (select2) select2.value = lang;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  var specsContainer = document.getElementById('specs-container');
+  var specSelect = document.getElementById('filter-spec');
+  var trainerSelect = document.getElementById('filter-trainer');
+  var modeSelect = document.getElementById('filter-mode');
+  var searchInput = document.getElementById('filter-search');
+  var resetBtn = document.getElementById('filters-reset-btn');
+
+  [specSelect, trainerSelect, modeSelect].forEach(function (el) { el.addEventListener('change', applyFilters); });
+  searchInput.addEventListener('input', applyFilters);
+  resetBtn.addEventListener('click', function () {
+    specSelect.value = 'all'; trainerSelect.value = 'all'; modeSelect.value = 'all'; searchInput.value = '';
+    applyFilters();
+  });
+
+  specsContainer.addEventListener('click', function (e) {
+    var closeBtn = e.target.closest('.fc-flip-close');
+    var levelBtn = e.target.closest('.fc-level-btn');
+    var backCta = e.target.closest('.fc-back-cta');
+    var trainerLink = e.target.closest('.fc-trainer-link');
+    var card = e.target.closest('.flip-card');
+    if (!card) return;
+    var backFace = e.target.closest('.fc-back-face');
+    if (trainerLink) {
+      // let the link navigate; do nothing else
+      return;
+    } else if (closeBtn) {
+      e.stopPropagation();
+      card.classList.remove('is-flipped');
+    } else if (levelBtn) {
+      e.stopPropagation();
+      var level = levelBtn.getAttribute('data-level');
+      var levels = card.querySelectorAll('.fc-level-btn');
+      levels.forEach(function (b) { b.classList.remove('active'); });
+      levelBtn.classList.add('active');
+      var found = findTrackBySpecAndTitle(card.getAttribute('data-spec'), card.getAttribute('data-track-title-ar'));
+      var metricsBox = card.querySelector('.fc-metrics');
+      if (found && metricsBox) {
+        var metricsArr = found.track.levels[level][currentLang] || found.track.levels[level].ar;
+        metricsBox.innerHTML = metricsHtml(metricsArr);
+      }
+    } else if (backCta) {
+      // real link: allow default navigation, do not toggle flip
+      return;
+    } else if (backFace) {
+      // clicking anywhere else on the back face flips back to front
+      card.classList.remove('is-flipped');
+    } else {
+      // clicking anywhere on the front face flips to back
+      card.classList.add('is-flipped');
+    }
+  });
+
+  // ---- Google Sites-safe smooth scroll ----
+  var scrollToTracks = document.getElementById('scroll-to-tracks');
+  if (scrollToTracks) {
+    scrollToTracks.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      var target = document.getElementById('tracks-section');
+      if (!target) return;
+      try { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      catch (error) { window.scrollTo(0, target.offsetTop); }
+    });
+  }
+
+  // ---- Sticky nav ----
+  var mainNav = document.getElementById('main-nav');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 80) { mainNav.classList.add('scrolled-nav'); }
+    else { mainNav.classList.remove('scrolled-nav'); }
+  });
+
+  // ---- Back to top ----
+  var backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 400) backToTop.classList.add('show');
+    else backToTop.classList.remove('show');
+  });
+  backToTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ---- Mobile menu ----
+
+
+  // ---- Bottom nav show/hide/compact ----
+  var bottomNav = document.getElementById('mobile-bottom-nav');
+  if (bottomNav) {
+    var lastScrollY = window.scrollY;
+    function isCopyrightReached() {
+      var cp = document.querySelector('.copyright');
+      if (!cp) return false;
+      var rect = cp.getBoundingClientRect();
+      return rect.top < window.innerHeight - 40;
+    }
+    function onScroll() {
+      var currentY = window.scrollY;
+      if (currentY <= 80) { bottomNav.classList.remove('show'); }
+      else if (currentY < lastScrollY) { bottomNav.classList.add('show'); }
+      else if (currentY > lastScrollY) { bottomNav.classList.remove('show'); }
+      if (isCopyrightReached()) { bottomNav.classList.add('compact'); }
+      else { bottomNav.classList.remove('compact'); }
+      if (backToTop.classList.contains('show') && bottomNav.classList.contains('show')) {
+        backToTop.classList.add('lifted');
+      } else { backToTop.classList.remove('lifted'); }
+      lastScrollY = currentY;
+    }
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('resize', onScroll);
+    onScroll();
+  }
+
+  // ---- Language switcher ----
+  var langSwitcher = document.getElementById('lang-switcher');
+  if (langSwitcher) {
+    langSwitcher.addEventListener('change', function () { setLanguage(this.value); });
+  }
+  window.addEventListener('resize', updateLangUI);
+
+  setLanguage('ar');
+});
+
+</script>
+
+</body>
+</html>
